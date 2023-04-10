@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
+import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -45,7 +46,9 @@ class _CutsomListTile extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: () {
-        // todo: Navigate to the next screen
+        // Navigator.of(context).push(
+        //     MaterialPageRoute(builder: (context) => const ButtonsScreen()));
+        Navigator.of(context).pushNamed(menuItem.link);
       },
     );
   }
