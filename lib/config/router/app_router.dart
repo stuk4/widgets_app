@@ -1,6 +1,8 @@
 // GoRouter configuration
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/presentation/screens/counter/counter_screen.dart';
 import 'package:widgets_app/presentation/screens/screens.dart';
+import 'package:widgets_app/presentation/screens/theme_changer/theme_changer_screen.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
@@ -49,6 +51,16 @@ final appRouter = GoRouter(
       name: InfiniteScrollScreen.name,
       path: '/infinte',
       builder: (context, state) => const InfiniteScrollScreen(),
+    ),
+    GoRoute(
+      name: CounterScreen.name,
+      path: '/counter-screen',
+      builder: (context, state) => const CounterScreen(),
+    ),
+    GoRoute(
+      name: ThemeChangerScreen.name,
+      path: '/theme-screen',
+      builder: (context, state) => const ThemeChangerScreen(),
     ),
   ],
 );

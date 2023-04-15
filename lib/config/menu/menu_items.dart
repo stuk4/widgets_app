@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:widgets_app/presentation/screens/counter/counter_screen.dart';
 import 'package:widgets_app/presentation/screens/screens.dart';
+import 'package:widgets_app/presentation/screens/theme_changer/theme_changer_screen.dart';
 
 class MenuItems {
   final String title;
@@ -63,5 +65,17 @@ const appMenuItems = <MenuItems>[
     subTitle: 'Listas infinitas y pull to referesh',
     link: InfiniteScrollScreen.name,
     icon: Icons.list_alt_rounded,
+  ),
+  MenuItems(
+    title: 'CounterScreen y Riverpod',
+    subTitle: 'Counter screen con Riverpod ',
+    link: CounterScreen.name,
+    icon: Icons.plus_one_outlined,
+  ),
+  MenuItems(
+    title: 'Theme Changer',
+    subTitle: 'Cambiar tema de la app',
+    link: ThemeChangerScreen.name,
+    icon: Icons.color_lens_outlined,
   )
 ];
